@@ -1,0 +1,104 @@
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random                        10	   5			229.8
+BFS                           10           5                     47.1  
+DFS (depth limit 20)          10          16.2                19072.7  
+DFS (depth limit 50)           7          48.143              30269.286 
+Greedy Search (using h1)      10           5.4                   70.3 
+A* (using h1)                 10           5.0                    6.5
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random                       10             12                2305.8 
+BFS                          10		    10		       747.4	
+DFS (depth limit 20)         10             18.8             24858.0  
+DFS (depth limit 50)          5             48.8             39031.6 
+Greedy Search (using h1)      8             76                 326.625
+A* (using h1)                 10            10                  27.3
+
+
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random			      6             18.67           10936.833	
+BFS                          10             15              12672.0 
+DFS (depth limit 20)          8             18              41351.625
+DFS (depth limit 50)          7             48.429          20129.429
+Greedy Search (using h1)      6             90.333           2718.0
+A* (using h1)                10             15                313.8
+
+
+
+According to the data provided the algorithm A* is the best algorithm out of all the other ones.
+The A* algorithm solved the puzzle in optimal amount of moves with less states. The random 
+searcher algorithm is a hit or miss algorithm because it chooses randomly so the puzzle can be solved
+quickly or it can take long with less optimal moves and a lot of states. The second best algorithm was the 
+BFS searcher because it solved all the puzzles in less time with optimal moves but it tested more states than 
+A*.Greedy Searcher and DFS were the least optimal because both of those searchers solved the puzzle using too many
+moves and tested way more states than BFS and A*. Overall A* solved every puzzle with optimal amount of moves and less tested states, then
+BFS was the second best searcher.
+
+
+heuristic h2
+------------
+This heuristic add how many tiles are in the wrong by calling a mehtod from the board class and adds that number to the amount of tiles that are in the wrong column.
+This heuristic calls the two methods from board class which basically gives the amount of tiles that are in the wrong row and column.
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)      6              136.333        2237.83
+Greedy (heuristic h2)      10               74.8          254.2
+# Greedy with any other heuristics
+
+A* (heuristic h1)         10               18             1602.0
+A* (heuristic h2)         10               18              510.9 
+
+puzzles with 21-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)      4              109.0             416.5
+Greedy (heuristic h2)      10               83.4            397.7
+# Greedy with any other heuristics
+
+A* (heuristic h1)          10               21              6301.7
+A* (heuristic h2)          10		    21              1499.6
+
+puzzles with 24-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)      5              118.4             952.2   
+Greedy (heuristic h2)	   10             114.0             400.4
+# Greedy with any other heuristics
+
+A* (heuristic h1)          0      
+A* (heuristic h2)          10             24              5303.0  
+
+puzzles with 27-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)        4            197.5          4285.5
+Greedy (heuristic h2)       10            117.0           402.5
+# Greedy with any other heuristics
+
+A* (heuristic h1)            0
+A* (heuristic h2)            2              27            21037
+
+According to the results it can be seen that h2 does a better and faster job in getting the number of moves, testing states, and solving the puzzle overall. 
+h1 did not do well after the optimal moves changed from 18 to 21 and it either took really long to produce and answer or gave an answer that was less efficent than 
+h2 answer. The h2 did not work that well for A* with optimal numbers of 27 because thats a lot of moves and that will take a lot of time to solve for. because of the time constraint 
+h2 was only able to solve 2 puzzles but it could have solved all the puzzle if there was enough time. The greedy searcher did well with h2 through the test because it does not care
+about amount of optimal moves. A* was taking a while because it tries to find the solution in 21 moves.
+
+
+
+
